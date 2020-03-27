@@ -1,0 +1,29 @@
+html {
+    font-size: 12px;
+}
+
+span {
+    margin: 0 10px;
+}
+
+.col-md-9 {
+    height: 200px;
+    line-height: 200px;
+    margin:auto;
+
+}
+
+p {
+    font-family: arial;
+    line-height: 1.5;
+    margin: auto;
+    color: white;
+}
+
+body {
+    background-color: gray !important;
+}
+
+.center-block {
+    display: block;
+ }
