@@ -18,12 +18,23 @@ p {
     line-height: 1.5;
     margin: auto;
     color: white;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 body {
     background-color: gray !important;
 }
 
-.center-block {
+.center-img {
     display: block;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
  }
+
+ .center-block {
+     display: block;
+ }
+
+
