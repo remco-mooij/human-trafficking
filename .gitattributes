@@ -1,0 +1,8 @@
+“data/2013-01-01-2018-12-31.csv.csv” filter=lfs diff=lfs merge=lfs -text
+“input[[:space:]]data/2013-01-01-2018-12-31.csv.csv” filter=lfs diff=lfs merge=lfs -text
+“Tolu/input[[:space:]]data/2013-01-01-2018-12-31.csv” filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text
+*.js filter=lfs diff=lfs merge=lfs -text
+*.json filter=lfs diff=lfs merge=lfs -text
+*.ipynb filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
