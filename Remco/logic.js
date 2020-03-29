@@ -1,6 +1,6 @@
 var map = L.map("map", {
-    center: [40.86666667, 40.86666667],
-    zoom: 11
+    center: [30.86666667, -10.86666667],
+    zoom: 2.5
 });
 
 L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
@@ -11,42 +11,59 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(map);
 
 
-d3.json("human_trafficking.json").then((data) => {
-  var traffickingCountries = data.yearOfRegistration;
-  console.log(traffickingCountries);
+  var countries = "ht_countries.geojson"
+
+
+
+
+
+
+
+
+  // return traffickingCountries.indexOf(25) > -1;
+
+
+  
+
+    
+  //     switch (id) {
+  //     case countryCode:
+  //       return "yellow";
+  //     default:
+  //       return "black";
+  //     }
+  //   };
+  // };
+
+
+d3.json(countries, function(data) {
+  L.geoJson(data, {
+    style: function(feature) {
+      return {
+        color: "white",
+        weight: 1.5,
+        fillOpacity: 0.8,
+        fillColor: "red"
+      };
+    }
+  }).addTo(map);
 });
 
+  // function filterMap(feature) {
+  //   d3.json("human_trafficking2.json", function(importedData) {
+  //     // Get only unique countries from json file and map them to an array
+  //     const traffickingCountries = [...new Set(importedData.map(d => d.citizenship))];
+      
+  //     for (var i = 0; i < traffickingCountries.length; i++) {
+  //       var countryCode = traffickingCountries[i];
+  //       console.log(countryCode);
+  //       if (feature.id === "USA") return True
+  //     };
+  //   });
+  // };
 
-
-// function colorCountry(id) {
-//   for (var i = 0; i < human_trafficking.length; i++) {
-//     var countryList = human_trafficking.citizenship;
-//     console.log(countryList);
-//   };
-
-
-//   traffickingCountries.forEach((country) => {
-//     switch (id) {
-//     case country:
-//       return "yellow";
-//     default:
-//       return "black";
-//     }
-//   });
-// };
-
-
-var countries = "countries.geojson"
-
-// d3.json(countries, function(data) {
-//   L.geoJson(data, {
-//     style: function(feature) {
-//       return {
-//         color: "white",
-//         fillcolor: colorCountry(feature.id),
-//         fillOpacity: 0.5,
-//         weight: 1.5
-//       };
-//     }
-//   }).addTo(map);
-// });
+  // L.geoJson(countries, {
+  //   filter: function(feature) {
+  //     if (feature.features.id === "USA") return True
+  //       }
+  // }).addTo(map);
