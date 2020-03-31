@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Human Trafficking</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/countryStyle.css">
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-linear-gauge.min.js"></script>
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/spiritedaway.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <h1 style="text-align: center;"><strong> HUMAN TRAFFICKING </strong></h1>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12  col-md-12">
+        <div class="title" style="text-align: center;">
+          <h2><strong>THE FOLLOWING INTERACTIVE CHARTS ARE GENERATED MAJORLY FROM THE 2018 TIP REPORT AND THE ACLED DATASET</strong></h2>
+          <p> </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 custom-panel">
+        <div class="well">
+          <h5><strong>SELECT COUNTRY:</strong></h5>
+          <select id="selDataset" onchange="optionChanged(this.value)" style="width: 180px;"></select>
+        </div>
+        <br>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h5 class="panel-title"><strong>METADATA</strong></h5>
+          </div>
+          <div id="country-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-9">
+          <div id="gauge"></div>
+      </div>
+      <div class="col-md-12">
+        <div id="tier" style="text-align: center;"></div>
+      </div>
+      <hr>
+      <div class="col-md-12">
+        <div id="map"></div>
+      </div>
+      <hr>
+      <div class="col-xs-12  col-md-12">
+        <div class="title" style="text-align: center;">
+          <h2><strong>INTRODUCTION</strong></h2>
+          <p> </p>
+        </div>
+      </div>
+      <br>
+      <div class="col-md-12">
+        <div id="intro" style="text-align: justify;"></div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      <div class="col-md-12">
+        <div id="linearGauge" style="width:100%; height: 400px;"></div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      <div class="col-md-12">
+        <div id="bar" style="width:100%; height: 500px;"></div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      <div class="col-xs-12  col-md-12">
+        <div class="title" style="text-align: center;">
+          <h2><strong>TRAFFICKING PROFILE</strong></h2>
+          <p> </p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div id="trafficking_profile" style="text-align: justify;"></div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      <div class="col-md-12">
+        <div class="word_cloud" style="width:100%; height: 400px;">
+        </div>
+      </div>
+      <br>
+      <hr>
+      <br> 
+      <div class="col-xs-12  col-md-12">
+        <div class="title" style="text-align: center;">
+          <h2><strong>GOVERNMENT EFFORTS</strong></h2>
+          <p> </p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div id="efforts" style="text-align: justify;"></div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
+  <!-- API key -->
+  <script type="text/javascript" src="assets/js/config.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</body>
+
+</html>
