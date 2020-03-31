@@ -32,7 +32,7 @@
 /* font size dependent on radius, see app.js */
 .countryText {
   font-family: sans-serif;
-  fill: #fff;
+  fill: black;
   text-anchor: middle;
   font-weight: bold;
   font-size: 11px;
