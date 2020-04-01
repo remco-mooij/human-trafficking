@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Human Trafficking</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/d3Style.css">
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-md navbar-custom ">
+    <a class="navbar-brand" href="index.html">
+      <a class="nav-link active-nav" href="index.html" style="color: white;"><i class="fas fa-home" style="color: white;"></i><strong>HOME</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="country.html"><strong>COMPARISON</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><strong>DATA</strong></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid banner">
+    <div class="banner-text text-center">
+      <h1 style="text-align: center;"><strong>STOP HUMAN TRAFFICKING</strong></h1>
+      <div class="down-arrow"><a href="#start"><img src="assets/Images/down-arrow.png"></a></div>
+    </div>
+  </div>
+  <div class="header">
+    <div class="row">
+      <div class="col-xs-12 col-md-12" id="start">
+        <h1 style="text-align: center;"><strong> HUMAN TRAFFICKING </strong></h1>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12  col-md-12">
+        <div class="article">
+          <p style="text-align:justify;"> Human trafficking involves the use of force, fraud, or coercion to obtain
+            some type of labor or commercial sex act.
+            Every year, millions of men, women, and children are trafficked worldwide – including right here in the United States.
+            It can happen in any community and victims can be any age, race, gender, or nationality. Traffickers might use
+            violence,
+            manipulation, or false promises of well-paying jobs or romantic relationships to lure victims into trafficking
+            situations.
+          
+            Language barriers, fear of their traffickers, and/or fear of law enforcement frequently keep victims from seeking
+            help,
+            making human trafficking a hidden crime.
+          
+            Traffickers use force, fraud, or coercion to lure their victims and force them into labor or commercial sexual
+            exploitation. They look for people who are susceptible for a variety of reasons, including psychological or emotional
+            vulnerability, economic hardship, lack of a social safety net, natural disasters, or political instability. The trauma
+            caused by the traffickers can be so great that many may not identify themselves as victims or ask for help, even in
+            highly public settings.
+          
+            Many myths and misconceptions exist. Recognizing key indicators of human trafficking is the first step in identifying
+            victims and can help save a life.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="header">
+    <div class="row">
+      <div class="col-xs-12 col-md-12" id="start">
+        <h1 style="text-align: center;"><strong> RELATIONSHIP BETWEEN HUMAN TRAFFICKING EVENTS AND INDICATORS </strong></h1>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12  col-md-12">
+        <div id="scatter">
+          <!-- We append our chart here. -->
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-xs-12  col-md-12">
+        <div class="article">
+          <p style="text-align:justify;"> According to <a href="https://migrationdataportal.org/themes/human-trafficking" target="_blank">Migration Data Portal</a>, the crime of human trafficking is complex and dynamic, taking place in a wide variety of contexts and difficult to
+          detect. One of the greatest challenges in developing targeted counter-trafficking responses and measuring their impact
+          is the lack of reliable, high-quality data related to the scale of human trafficking and the profile of victims.
+          
+          The need for improved international response to human trafficking and commitment to its eradication is illustrated by
+          its prominent inclusion in the targets of the United Nations (UN) Sustainable Development Goals (SDGs) and the Global
+          Compact for Safe, Orderly, and Regular Migration (GCM). Eradicating human trafficking is addressed specifically in goals
+          5.2, 8.7 and 16.2. The GCM’s 10th Objective also calls for specific measures to prevent and combat trafficking in
+          persons in the context of international migration.
+          </p>
+        </div>
+      </div>
+      <hr>
+      <div class="col-xs-12  col-md-12">
+        <a href="country.html" target="_blank"><p style="text-align:center; color: dimgrey;">Explore Human Trafficking Events by Country.</p></a>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <footer class="footer">
+    <div class="container-fluid text-center">
+      <a href="https://github.com/remco-mooij/human-trafficking/" target="_blank">
+        <i class="fab fa-github fa-2x" style="color: #e3e3e3;"></i>
+      </a>
+      <p class="text text-center">
+        <small>© Copyright Tolu Omotunde - Remco Mooij - Kate Minyard - Sree Yallapragada - Adam Iowa -2020</br>
+          UNC CHAPELHILL© Data Analytics Boot Camp</small>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
+
+</body>
+
+</html>

@@ -2,18 +2,37 @@
 body{
   font-family: 'Barlow Condensed' , sans-serif;
   font-size: 20px;
+  padding-bottom: 80px;
+  background-color: lightgrey;
+}
+
+.navbar-brand {
+	font-family: "Source Sans Pro";
+	font-weight: bolder;
+	font-size: 20px;
+  margin-left: 40px;
+  color: #ffffff;
+}
+
+nav .navbar-nav li a{
+  color: white !important;
+  }
+
+.nav-item{
+	padding-left: 15px;
 }
 
 .header{
   margin-top: 0;
   font-family: 'Barlow Condensed', sans-serif;
-  background: #98a6bb;
+  background: silver;
   color: white;
   padding:20px;
   padding-left: 60px;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
+
 .title{
   margin-top: 20px;
 }
@@ -22,11 +41,6 @@ body{
 html {
   position: relative;
   min-height: 100%;
-}
-
-body {
-  /* Padding bottom by footer height */
-  padding-bottom: 80px;
 }
 
 #footer {

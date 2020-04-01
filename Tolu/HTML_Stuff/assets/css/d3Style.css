@@ -19,7 +19,7 @@
 
 .inactive {
   font-weight: lighter;
-  fill: #c9c9c9;
+  fill: dimgray;
   transition: fill 0.5s ease-out;
   text-anchor: middle;
 }
