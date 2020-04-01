@@ -1,10 +1,19 @@
-body {
+html, body {
     padding: 0px;
     margin: 0px;
+    height: 100%;
+    width: 100%
   }
   
-  #map,
-  body,
-  html {
-    height: 100%;
-  }
+
+#map {
+  position: relative;
+  border: 1px black;
+  border-radius: 8px;
+  height: 500px;
+  width: 100%;
+}
+
+/* .container {
+  height: 1000px;
+} */
