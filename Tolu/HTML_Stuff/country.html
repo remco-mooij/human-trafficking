@@ -20,8 +20,7 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/countryStyle.css">
+  <link rel="stylesheet" href="assets/css/style2.css">
   <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
   <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-linear-gauge.min.js"></script>
   <script src="https://www.amcharts.com/lib/4/core.js"></script>
@@ -31,10 +30,29 @@
 </head>
 
 <body>
+  <nav class="navbar fixed-top navbar-expand-md navbar-custom ">
+    <a class="navbar-brand" href="index.html">
+      <a class="nav-link active-nav" href="index.html" style="color: white;"><i class="fas fa-home"
+          style="color: white;"></i><strong>HOME</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="country.html"><strong>COMPARISON</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><strong>DATA</strong></a>
+          </li>
+        </ul>
+      </div>
+  </nav>
   <div class="header">
     <div class="row">
       <div class="col-xs-12 col-md-12">
-        <h1 style="text-align: center;"><strong> HUMAN TRAFFICKING </strong></h1>
+        <h2 style="text-align: center;"><strong> COUNTRY COMPARISON </strong></h2>
       </div>
     </div>
   </div>
@@ -42,7 +60,7 @@
     <div class="row">
       <div class="col-xs-12  col-md-12">
         <div class="title" style="text-align: center;">
-          <h2><strong>THE FOLLOWING INTERACTIVE CHARTS ARE GENERATED MAJORLY FROM THE 2018 TIP REPORT AND THE ACLED DATASET</strong></h2>
+          <h4><strong>THE FOLLOWING INTERACTIVE CHARTS ARE GENERATED MAJORLY FROM THE 2018 TIP REPORT AND THE ACLED DATASET</strong></h4>
           <p> </p>
         </div>
       </div>
@@ -74,50 +92,78 @@
       <br>
       <hr>
       <p>   </p>
-      <div class="col-md-12">
-        <div id="fatality" style="text-align: center;"><h2><strong>MAP OF TRAFFICKING EVENTS WEIGHTED BY FATALITIES</strong></h2></div>
+    </div>
+  </div>
+  <div class="header">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div id="fatality" style="text-align: center;">
+          <h2><strong>MAP OF CRIMES AGAINST HUMANITY WEIGHTED BY NUMBER OF FATALITIES</strong></h2>
+        </div>
       </div>
-      <hr>
-      <style>
-        .map-container {
-          height: 500px
-        }
-      </style>
+    </div>
+  </div>
+  <style>
+    .map-container {
+      height: 500px
+    }
+  </style>
+  <br>
+  <div class="container">
+    <div class="row">
       <div class="col-md-12 map-container">
         <div id="map"></div>
       </div>
-      <hr>
-      <div class="col-xs-12  col-md-12">
-        <div class="title" style="text-align: center;">
+    </div>
+  </div>
+  <br>
+  <div class="header">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div style="text-align: center;">
           <h2><strong>INTRODUCTION</strong></h2>
-          <p> </p>
         </div>
       </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
       <br>
       <div class="col-md-12">
         <div id="intro" style="text-align: justify;"></div>
       </div>
       <br>
-      <hr>
-      <br>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
       <div class="col-md-12">
-        <div id="linearGauge" style="width:100%; height: 400px;"></div>
+        <div id="linearGauge" style="width:100%; height: 400px; fill:lightgrey;"></div>
       </div>
       <br>
       <hr>
       <br>
       <div class="col-md-12">
-        <div id="bar" style="width:100%; height: 500px;"></div>
+        <div id="bar" style="height: 500px; fill:lightgrey;"></div>
       </div>
       <br>
-      <hr>
-      <br>
-      <div class="col-xs-12  col-md-12">
-        <div class="title" style="text-align: center;">
+    </div>
+  </div>
+  <br>
+  <div class="header">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div style="text-align: center;">
           <h2><strong>TRAFFICKING PROFILE</strong></h2>
-          <p> </p>
         </div>
       </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
       <div class="col-md-12">
         <div id="trafficking_profile" style="text-align: justify;"></div>
       </div>
@@ -125,18 +171,24 @@
       <hr>
       <br>
       <div class="col-md-12">
-        <div class="word_cloud" style="width:100%; height: 400px;">
+        <div class="word_cloud" style="width:100%; height: 450px;">
         </div>
       </div>
-      <br>
-      <hr>
-      <br> 
-      <div class="col-xs-12  col-md-12">
-        <div class="title" style="text-align: center;">
+    </div>
+  </div>
+  <br>
+  <div class="header">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div style="text-align: center;">
           <h2><strong>GOVERNMENT EFFORTS</strong></h2>
-          <p> </p>
         </div>
       </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
       <div class="col-md-12">
         <div id="efforts" style="text-align: justify;"></div>
       </div>
@@ -158,7 +210,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
-  <script type="text/javascript" src="assets/js/app.js"></script>
+  <script type="text/javascript" src="assets/js/app2.js"></script>
   <!-- API key -->
   <script type="text/javascript" src="assets/js/config.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>

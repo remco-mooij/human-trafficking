@@ -14,7 +14,7 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style2.css">
   <link rel="stylesheet" href="assets/css/d3Style.css">
 
 </head>
@@ -31,7 +31,7 @@
     <div class="row">
       <div class="col-xs-12  col-md-12">
         <div class="title" style="text-align: center;">
-          <h2>Relationship between Human Trafficking Events & Indicators</h2>
+          <h2>Use the interative charts to explore the dataset</h2>
           <p>          </p>
         <hr>
         </div>
@@ -41,25 +41,47 @@
       </div>
     </div>
     <hr>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 custom-panel">
+        <div class="well">
+          <h5>SELECT COUNTRY:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">METADATA</h3>
+          </div>
+          <div id="country-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="col-md-6">
+          <div id="map"></div>
+        </div>
+        <div class="col-md-6">
+          <div id="gauge"></div>
+        </div>
+        <div class="col-md-12">
+          <div id="bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
     <div class="row">
       <div class="col-xs-12  col-md-12">
         <div class="article">
           <h2> </h2>
-          <p style="text-align:justify;"> According to <a href="https://migrationdataportal.org/themes/human-trafficking" target="_blank">Migration Data Portal</a>, the crime of human trafficking is complex and dynamic, taking place in a wide variety of contexts and difficult to
-          detect. One of the greatest challenges in developing targeted counter-trafficking responses and measuring their impact
-          is the lack of reliable, high-quality data related to the scale of human trafficking and the profile of victims.
-          
-          The need for improved international response to human trafficking and commitment to its eradication is illustrated by
-          its prominent inclusion in the targets of the United Nations (UN) Sustainable Development Goals (SDGs) and the Global
-          Compact for Safe, Orderly, and Regular Migration (GCM). Eradicating human trafficking is addressed specifically in goals
-          5.2, 8.7 and 16.2. The GCM’s 10th Objective also calls for specific measures to prevent and combat trafficking in
-          persons in the context of international migration.
-          </p>
-
           <p> </p>
-
+    
           <p> </p>
-            <a href=" " target="_blank">Explore the code</a>
+    
+          <p> </p>
+          <a href=" " target="_blank">Explore the code</a>
         </div>
       </div>
     </div>

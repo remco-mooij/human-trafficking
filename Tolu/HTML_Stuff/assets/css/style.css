@@ -1,0 +1,100 @@
+.banner {
+	background-image: url('../Images/trafficking_img.jpeg');
+	min-height: 750px;
+	background-repeat: no-repeat;
+	background-position: center top; 
+  background-size: cover; 
+  background-attachment: fixed;
+}
+
+.banner-text {
+	padding-top: 10%;
+}
+
+.banner-text h1{
+	font-family: "Source Sans Pro";
+	color: #ffffff;
+	font-size: 53px;
+	letter-spacing: 10px;
+	font-weight: 600;
+}
+
+.banner-text a{
+	color: #8d8d8d;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 3px;
+	line-height: 24px;
+	margin-top: 10px;
+	margin-bottom: 80px;
+	text-transform: uppercase;
+}
+
+.navbar-brand {
+	font-family: "Source Sans Pro";
+	font-weight: bolder;
+	font-size: 20px;
+  margin-left: 40px;
+  color: #ffffff;
+}
+
+nav .navbar-nav li a{
+  color: white !important;
+  }
+
+.nav-item{
+	padding-left: 15px;
+}
+
+.down-arrow{
+	padding-top: 100px;
+	opacity: 1;
+}
+
+.card{
+	border:none; 
+}
+
+body{
+  font-family: 'Barlow Condensed' , sans-serif;
+  font-size: 20px;
+  padding-bottom: 80px;
+  background-color: lightgrey;
+}
+
+.header{
+  margin-top: 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  background: silver;
+  color: white;
+  padding:20px;
+  padding-left: 60px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.title{
+  margin-top: 20px;
+}
+
+/* Sticky Footer rules (https://getbootstrap.com/examples/sticky-footer/) */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%; /* Set the fixed height of the footer here */
+  height: 10px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+#footer p {
+  margin: 0;
+  font-size: 16px;
+}
