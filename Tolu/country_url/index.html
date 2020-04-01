@@ -52,7 +52,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-3 custom-panel">
+      <div class="col-md-4 custom-panel">
         <div class="well">
           <h5><strong>SELECT COUNTRY:</strong></h5>
           <select id="selDataset" onchange="optionChanged(this.value)" style="width: 180px; font-size:medium;"></select>
@@ -65,14 +65,25 @@
           <div id="country-metadata" class="panel-body"></div>
         </div>
       </div>
-      <div class="col-md-9">
+      <div class="col-md-8">
           <div id="gauge"></div>
       </div>
       <div class="col-md-12">
         <div id="tier" style="text-align: center;"></div>
       </div>
+      <br>
       <hr>
+      <p>   </p>
       <div class="col-md-12">
+        <div id="fatality" style="text-align: center;"><h2><strong>MAP OF TRAFFICKING EVENTS WEIGHTED BY FATALITIES</strong></h2></div>
+      </div>
+      <hr>
+      <style>
+        .map-container {
+          height: 500px
+        }
+      </style>
+      <div class="col-md-12 map-container">
         <div id="map"></div>
       </div>
       <hr>
