@@ -29,6 +29,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="https://d3js.org/d3.v4.min.js"></script>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.mapbox.com/mapbox.js/v3.3.0/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v3.3.0/mapbox.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -52,7 +55,7 @@
   </nav>
   <div class="container-fluid banner">
     <div class="banner-text text-center">
-      <h1 style="text-align: center;"><strong>STOP HUMAN TRAFFICKING</strong></h1>
+      <h1 style="text-align: center;"><strong>I AM NOT FOR SALE - SAY NO TO HUMAN TRAFFICKING</strong></h1>
       <div class="down-arrow"><a href="#start"><img src="assets/Images/down-arrow.png"></a></div>
     </div>
   </div>
@@ -130,6 +133,26 @@
   <br>
   <div class="header">
     <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <h1 style="text-align: center;"><strong> HUMAN TRAFFICKING ROUTES NETWORK </strong>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="row col-md-12">
+        <div class="col-md-12">
+          <div id="map2" class="dark"></div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="header">
+    <div class="row">
       <div class="col-xs-12 col-md-12" id="start">
         <h1 style="text-align: center;"><strong> HUMAN TRAFFICKING INDICATORS </strong></h1>
       </div>
@@ -180,10 +203,10 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+  <script src='https://api.mapbox.com/mapbox.js/plugins/arc.js/v0.1.0/arc.js'></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
   <script type="text/javascript" src="assets/js/config.js"></script>
   <script type="text/javascript" src="assets/js/logic.js"></script>
-
 </body>
 
 </html>
