@@ -53,13 +53,12 @@ L.mapbox.accessToken = 'pk.eyJ1Ijoic3lhbGxhcCIsImEiOiJjazd3aGxnc3MwMmg5M2xxZ3h0Y
 
 
 // Displays worldwide view upon page loading (setView arranges according to Lat, Lng, zoom level)
-//Default zoom level is 2 to refelct worldwide flight paths, however, for this project, it is set
-//at 3 to focus on high traffic areas in South America, Eastern Europe, Western Africa, 
-//South East Asia, and Oceania (Australia/NZ/South Pacific)
-//Setting zoom to 2 enables user to see worldwide view of paths, but does not focus on high
-//traffic areas. 
+//Default zoom level is 2 to reflect worldwide flight paths. Setting zoom at 3 allows for regional focus on high traffic areas 
+//in South America, Eastern Europe, Western Africa, South East Asia, and Oceania (Australia/NZ/South Pacific)
+//However, the user has to manually drag the map, in order to see the paths for Oceania, the rest of continental Africa, and 
+//the entire Western Hemisphere.
 map = L.mapbox.map('map')
-    .setView([25, 0], 3)
+    .setView([25, 5], 2)
     //1. Predefined style from Mapbox: Satellite terrain view without borders/country labels
     //.addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/satellite-v9'));
 
@@ -97,7 +96,8 @@ for (var i = 0; i < coordinate_pairs.length; i++) {
     var newLine = L.polyline(line.geometries[0].coords.map(function(c) {
         return c.reverse();
     }), {
-        //color: "#DF2F20", //Pairs with Mapbox style 2 (red flight lines)
+        //color: "#E71818", //Pairs with Mapbox style 2 (red flight lines)
+        //color: "#170E9A", //Pairs with Mapbox style 2, (navyS flight lines)
         color: "#28C599",
         weight: 1,
         opacity: 0.5
