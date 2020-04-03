@@ -23,9 +23,31 @@ nav .navbar-nav li a{
 	border:none; 
 }
 
+
+.navbar-brand {
+	font-family: "Source Sans Pro";
+	font-weight: bolder;
+	font-size: 20px;
+  margin-left: 40px;
+  color: #ffffff;
+}
+
+nav .navbar-nav li a{
+  color: white !important;
+  }
+
+.nav-item{
+	padding-left: 15px;
+}
+
+
+.card{
+	border:none; 
+}
+
 body{
   font-family: 'Barlow Condensed' , sans-serif;
-  font-size: 14px;
+  /* font-size: 20px; */
   padding-bottom: 80px;
   padding-left: 0px;
   margin-left: 0px;
