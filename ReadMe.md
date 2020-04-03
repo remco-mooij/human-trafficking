@@ -96,8 +96,6 @@ The gauge chart, world cloud, map of conflicts , bar charts and gauge tanks were
 
 ## Deployment
 
-- - -
-
 Deployed the app to GitHub's free static page hosting service.
 
 
