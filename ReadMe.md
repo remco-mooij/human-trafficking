@@ -40,7 +40,6 @@ The gauge chart, world cloud, map of conflicts , bar charts and gauge tanks were
 
 ## LIBRARIES USED:
 
-- - -
 
 1. D3.js
 
@@ -58,7 +57,6 @@ The gauge chart, world cloud, map of conflicts , bar charts and gauge tanks were
 
 ##  THE FINAL WEBSITE HAD THE FOLLOWING CHARTS:
 
-- - -
 
 ### HOME PAGE
 
