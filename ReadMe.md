@@ -52,7 +52,7 @@ The gauge chart, world cloud, map of conflicts , bar charts and gauge tanks were
 
 - - -
 
-##  THE FINAL WEBSITE LOOKED LIKED THIS:
+##  THE FINAL WEBSITE HAD THE FOLLOWING CHARTS:
 
 ### HOME PAGE
 
