@@ -1,6 +1,7 @@
 const tableBody = d3.select("tbody");
 
-
+// Select the button; moved to top
+var button = d3.select("#filter-btn");
 
 d3.json("trafficking.json", function(d) {
     var data = Object.values(d);
@@ -73,6 +74,7 @@ d3.json("trafficking.json", function(d) {
             var inputElement = d3.select("#term");
             var inputValue = inputElement.property("value");
         
+            // Filter displays "value"
             if (term == "Base Country") {
                 var filteredData = tableData.filter(tableData => tableData["Base Country"] === inputValue);
             }
@@ -84,11 +86,13 @@ d3.json("trafficking.json", function(d) {
             // Empty table data before query
             d3.select("tbody").html("");
         
-             //Loop through filtered data
+             // Loop through filtered data
+             // var row = tbody...
+             // cell = tbody.append...
             filteredData.forEach((dataRow) => {
-                var row = tbody.append("tr");
+                var row = tableBody.append("tr");
                 Object.entries(dataRow).forEach(([key, value]) => {
-                    cell = tbody.append("td");
+                    cell = tableBody.append("td");
                     cell.text("value");
                 });
         
@@ -141,7 +145,4 @@ d3.json("trafficking.json", function(d) {
     init();
 
 });
-
-
-
 
