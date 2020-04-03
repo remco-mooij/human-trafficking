@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DATA PAGE</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/d3Style.css"> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style4.css">
+  </head>
+
+  <body>
+    <nav class="navbar fixed-top navbar-expand-md navbar-custom ">
+      <a class="navbar-brand" href="index.html">
+        <a class="nav-link active-nav" href="index.html" style="color: white;"><i class="fas fa-home"
+            style="color: white;"></i><strong>HOME</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="country.html"><strong>COMPARISON</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="datapage.html"><strong>DATA</strong></a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="header">
+      <div class="row ">
+        <div class="col-md-12" id="start">
+          <h1 style="text-align: center;"><strong> DATA PAGE </strong></h1>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row margin-top-30">
+        <div class="col-md-2.5">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Search Filters</div>
+              <div class="panel-body">
+                <select id="selFilterQuery" style="width: 200px; font-size:medium;" onchange="getData(this.value)">
+                  <option value="Base Country">Base Country</option>
+                  <option value="Relation Country">Relation Country</option>
+                </select>
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="country" id="SearchTerm">Enter a Base Country</label>
+                        <input class="form-control" id="term" type="text" placeholder="Afghanistan">
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+    
+        <div class="col-md-12">
+          <div id="table-area">
+            <table id="my-table" class="table table-striped" style="border: medium solid #FFFFFF; background-color: lightgrey; border: 3; width: 100%; table-layout: auto; font-size:13px; text-align: center;">
+              <thead>
+                <tr>
+                  <th>Base Country</th>
+                  <th>Base Country Latitude</th>
+                  <th>Base Country Longitude</th>
+                  <th>Relation Country</th>
+                  <th>Relation Country Latitude</th>
+                  <th>Relation Country Longitude</th>
+                  <th>Men</th>
+                  <th>Women</th>
+                  <th>Children</th>
+                  <th>Sex Trafficking</th>
+                  <th>Forced Labor</th>
+                  <th>Debt Bondage</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <hr>
+    <footer class="footer">
+      <div class="container-fluid text-center">
+        <a href="https://github.com/remco-mooij/human-trafficking/" target="_blank">
+          <i class="fab fa-github fa-2x" style="color: #e3e3e3;"></i>
+        </a>
+        <p class="text text-center">
+          <small>© Copyright Tolu Omotunde - Remco Mooij - Kate Minyard - Sree Yallapragada - Adam Iowa -2020</br>
+            UNC CHAPELHILL© Data Analytics Boot Camp</small>
+        </p>
+      </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/arc.js/v0.1.0/arc.js'></script>
+    <script type="text/javascript" src="assets/js/app3.js"></script>
+  </body>
+</html>

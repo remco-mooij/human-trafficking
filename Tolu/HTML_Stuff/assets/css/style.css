@@ -123,3 +123,8 @@ html {
   border: 1px black;
   border-radius: 8px;
 }
+
+.hero h1 {
+  animation: title 1.2s forwards linear;
+}
+
