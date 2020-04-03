@@ -26,7 +26,6 @@ The gauge chart, world cloud, map of conflicts , bar charts and gauge tanks were
 
 ## DATA SOURCES
 
-- - -
 
 1. [Counter-trafficking data collaborative](https://www.ctdatacollaborative.org/)
 
