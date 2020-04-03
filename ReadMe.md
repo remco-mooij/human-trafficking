@@ -1,6 +1,8 @@
+![Bacteria by filterforge.com](Images/human-trafficking.jpg)
+
 # VISUALIZATION OF HUMAN TRAFFICKING ACROSS THE GLOBE
 
-![LANDING PAGE](Images/landing.png)
+- - -
 
 Built an interactive webpage to explore the nature of human trafficking globally. Some of the key takeaways include:
 
