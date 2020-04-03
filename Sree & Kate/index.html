@@ -1,0 +1,124 @@
+<!-- Modeled after https://docs.mapbox.com/mapbox.js/example/v1.0.0/animating-flight-paths/.
+    Mapbox has a great page about using SVG/arc.js to animate flight paths, which tend to be
+    curved (geodesic). Flight paths worldwide fly an arc between two points, which is why
+    they are curved. Given that our data involves the movement of people throughout the world, 
+    we thought it was best to use this model to display the typical flight routes commonly 
+    traversed by traffickers and victims alike. 
+    NOTE: While some code has been used directly, other lines have been changed to reflect our
+    data and project scope. Original comments are in "". --> 
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Human Trafficking Flight Paths</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox.js/v3.3.0/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.3.0/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+
+<!-- Arc.js to make the flight paths curved -->
+<script src='https://api.mapbox.com/mapbox.js/plugins/arc.js/v0.1.0/arc.js'></script>
+
+<!-- Data file with origin/destination coordinate pairs. Coordinates do not reflect specific 
+    airport or city location. Coordinates simply reflect country location -->
+<script src='countries.js'></script>
+
+<style>
+/*
+ * The path-start class is added to each line to manage its animation - this interpolates
+ * between the starting and ending values for the stroke-dashoffset css property
+ */
+
+.path-start {
+  -webkit-transition:stroke-dashoffset 5s ease-in;
+     -moz-transition:stroke-dashoffset 5s ease-in;
+       -o-transition:stroke-dashoffset 5s ease-in;
+          transition:stroke-dashoffset 5s ease-in;
+}
+</style>
+
+<!-- location of map in webpage -->
+<div id='map' class='dark'></div>
+
+<script>
+
+//Page using Sree's personal Mapbox token to animate SVG properties
+L.mapbox.accessToken = 'pk.eyJ1Ijoic3lhbGxhcCIsImEiOiJjazd3aGxnc3MwMmg5M2xxZ3h0Y3puMnN0In0.1ltissQsYvEY21zrOQ8Cug';
+
+
+// Displays worldwide view upon page loading (setView arranges according to Lat, Lng, zoom level)
+//Default zoom level is 2 to reflect worldwide flight paths. Setting zoom at 3 allows for regional focus on high traffic areas 
+//in South America, Eastern Europe, Western Africa, South East Asia, and Oceania (Australia/NZ/South Pacific)
+//However, the user has to manually drag the map, in order to see the paths for Oceania, the rest of continental Africa, and 
+//the entire Western Hemisphere.
+map = L.mapbox.map('map')
+    .setView([25, 5], 2)
+    //1. Predefined style from Mapbox: Satellite terrain view without borders/country labels
+    //.addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/satellite-v9'));
+
+    //2. "Frank" style: Grey map view with borders, country labels, and oceans
+    //Loaded to Sree's account name
+    //.addLayer(L.mapbox.styleLayer('mapbox://styles/syallap/ck8hw9maq06e41ip5d8z0ixd3'));
+
+    //3. SELECTED LAYER: "Decimal" style: dark view with teal/aquamarine labels/borders 
+    //Loaded to Sree's account name
+    .addLayer(L.mapbox.styleLayer('mapbox://styles/syallap/ck8hw74iw06a41ipc5ez1ewok'));
+    
+// "Disable drag and zoom handlers. Making this effect work with zooming and panning
+// would require a different technique with different tradeoffs." - from arc.js site
+
+//For our project, dragging has been enabled in order for the user to move to other regions.
+//However, zooming in presents lots of unorganized lines. 
+//Recommendation: wait until all paths have loaded, so that it is easier to study each region
+map.dragging.enable();
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
+if (map.tap) map.tap.disable();
+
+// Transforms the [lat,lng] format into {x, y} format as expected by arc.js.
+function obj(ll) { return { y: ll[0], x: ll[1] }; }
+
+for (var i = 0; i < coordinate_pairs.length; i++) {
+    // Transform each pair of coordinates into great circle paths
+    var generator = new arc.GreatCircle(
+            obj(coordinate_pairs[i][0]),
+            obj(coordinate_pairs[i][1]));
+    var line = generator.Arc(100, { offset: 10 });
+    // "Leaflet expects [lat,lng] arrays, but a lot of software does the opposite, 
+    //including arc.js, so we flip here." - from site
+    var newLine = L.polyline(line.geometries[0].coords.map(function(c) {
+        return c.reverse();
+    }), {
+        //color: "#E71818", //Pairs with Mapbox style 2 (red flight lines)
+        //color: "#170E9A", //Pairs with Mapbox style 2, (navyS flight lines)
+        color: "#28C599",
+        weight: 1,
+        opacity: 0.5
+    })
+    .addTo(map);
+    var totalLength = newLine._path.getTotalLength();
+    newLine._path.classList.add('path-start');
+    // This pair of CSS properties hides the line initially
+    // (http://css-tricks.com/svg-line-animation-works/) - really helpful link 
+    //included with original url from line 1
+
+    newLine._path.style.strokeDashoffset = totalLength;
+    newLine._path.style.strokeDasharray = totalLength;
+    //"Offset timeout here: setTimeout makes a function run after a [few] milliseconds"
+    setTimeout((function(path) {
+        return function() {
+            // "setting the strokeDashoffset to 0 triggers the animation"
+            path.style.strokeDashoffset = 0;
+        };
+    })(newLine._path), i * 100);
+}
+</script>
+</body>
+</html>
