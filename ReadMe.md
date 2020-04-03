@@ -26,6 +26,8 @@ The gauge chart, world cloud, map of conflicts , bar charts and gauge tanks were
 
 ## DATA SOURCES
 
+- - -
+
 1. [Counter-trafficking data collaborative](https://www.ctdatacollaborative.org/)
 
 2. [The 2018 Trafficking in Persons (TIP) Report](https://www.state.gov/trafficking-in-persons-report/)
@@ -37,6 +39,8 @@ The gauge chart, world cloud, map of conflicts , bar charts and gauge tanks were
 - - -
 
 ## LIBRARIES USED:
+
+- - -
 
 1. D3.js
 
@@ -54,7 +58,11 @@ The gauge chart, world cloud, map of conflicts , bar charts and gauge tanks were
 
 ##  THE FINAL WEBSITE HAD THE FOLLOWING CHARTS:
 
+- - -
+
 ### HOME PAGE
+
+- - -
 
 ![Trafficking Network](Images/traf_network.png)
 
@@ -65,6 +73,8 @@ The gauge chart, world cloud, map of conflicts , bar charts and gauge tanks were
 - - -
 
 ### COUNTRY COMPARISON PAGE
+
+- - -
 
 ![GAUGE SMILEY](Images/gauge_smiley.png)
 
@@ -80,11 +90,15 @@ The gauge chart, world cloud, map of conflicts , bar charts and gauge tanks were
 
 ### DATA PAGE
 
+- - -
+
 ![Data Page](Images/datapage.png)
 
 - - -
 
 ## Deployment
+
+- - -
 
 Deployed the app to GitHub's free static page hosting service.
 
