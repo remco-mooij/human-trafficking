@@ -62,6 +62,8 @@ The gauge chart, world cloud, map of conflicts , bar charts and gauge tanks were
 
 ![Scatter Plot](Images/scatter_plot.png)
 
+- - -
+
 ### COUNTRY COMPARISON PAGE
 
 ![GAUGE SMILEY](Images/gauge_smiley.png)
@@ -73,6 +75,8 @@ The gauge chart, world cloud, map of conflicts , bar charts and gauge tanks were
 ![MONTH](Images/month.png)
 
 ![WORD CLOUD](Images/word_cloud.png)
+
+- - -
 
 ### DATA PAGE
 
