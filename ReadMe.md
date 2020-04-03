@@ -2,8 +2,6 @@
 
 # VISUALIZATION OF HUMAN TRAFFICKING ACROSS THE GLOBE
 
-- - -
-
 Built an interactive webpage to explore the nature of human trafficking globally. Some of the key takeaways include:
 
 1. Network map showing human trafficking routes globally;
