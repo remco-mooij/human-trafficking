@@ -56,8 +56,6 @@ The gauge chart, world cloud, map of conflicts , bar charts and gauge tanks were
 
 ### HOME PAGE
 
-![Landing Page](Images/landing.png)
-
 ![Trafficking Network](Images/traf_network.png)
 
 ![World Map](Images/world_map.png)
